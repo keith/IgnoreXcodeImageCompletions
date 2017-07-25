@@ -18,9 +18,18 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>DVTPlugInCompatibilityUUIDs</key>
+	<array>
+		<string>CA351AD8-3176-41CB-875C-42A05C7CDEC7</string>
+		<string>DFFB3951-EB0A-4C09-9DAC-5F2D28CC839C</string>
+	</array>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 SmileyKeith. All rights reserved.</string>
-	<key>NSPrincipalClass</key>
-	<string></string>
+	<key>XC4Compatible</key>
+	<true/>
+	<key>XCGCReady</key>
+	<false/>
+	<key>XCPluginHasUI</key>
+	<false/>
 </dict>
 </plist>

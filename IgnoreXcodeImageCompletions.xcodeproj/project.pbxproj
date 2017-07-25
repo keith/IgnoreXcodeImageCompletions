@@ -6,20 +6,31 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C2C637221F272BCA00772DE9 /* IgnoreXcodeImageCompletions.xcplugin in Install Plugin */ = {isa = PBXBuildFile; fileRef = C2C637181F272B4200772DE9 /* IgnoreXcodeImageCompletions.xcplugin */; };
+		C2C637251F272BDB00772DE9 /* IgnoreXcodeImageCompletions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C637241F272BDB00772DE9 /* IgnoreXcodeImageCompletions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C2C637211F272BBB00772DE9 /* Install Plugin */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "~/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+			dstSubfolderSpec = 0;
+			files = (
+				C2C637221F272BCA00772DE9 /* IgnoreXcodeImageCompletions.xcplugin in Install Plugin */,
+			);
+			name = "Install Plugin";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C2C637181F272B4200772DE9 /* IgnoreXcodeImageCompletions.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IgnoreXcodeImageCompletions.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C6371B1F272B4200772DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C637231F272BDB00772DE9 /* IgnoreXcodeImageCompletions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IgnoreXcodeImageCompletions.h; sourceTree = "<group>"; };
+		C2C637241F272BDB00772DE9 /* IgnoreXcodeImageCompletions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IgnoreXcodeImageCompletions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		C2C637151F272B4200772DE9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C2C6370F1F272B4200772DE9 = {
@@ -42,6 +53,8 @@
 			isa = PBXGroup;
 			children = (
 				C2C6371B1F272B4200772DE9 /* Info.plist */,
+				C2C637231F272BDB00772DE9 /* IgnoreXcodeImageCompletions.h */,
+				C2C637241F272BDB00772DE9 /* IgnoreXcodeImageCompletions.m */,
 			);
 			path = IgnoreXcodeImageCompletions;
 			sourceTree = "<group>";
@@ -54,8 +67,7 @@
 			buildConfigurationList = C2C6371E1F272B4200772DE9 /* Build configuration list for PBXNativeTarget "IgnoreXcodeImageCompletions" */;
 			buildPhases = (
 				C2C637141F272B4200772DE9 /* Sources */,
-				C2C637151F272B4200772DE9 /* Frameworks */,
-				C2C637161F272B4200772DE9 /* Resources */,
+				C2C637211F272BBB00772DE9 /* Install Plugin */,
 			);
 			buildRules = (
 			);
@@ -98,21 +110,12 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		C2C637161F272B4200772DE9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		C2C637141F272B4200772DE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2C637251F272BDB00772DE9 /* IgnoreXcodeImageCompletions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +214,6 @@
 		C2C6371F1F272B4200772DE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = IgnoreXcodeImageCompletions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smileykeith.IgnoreXcodeImageCompletions;
@@ -224,7 +226,6 @@
 		C2C637201F272B4200772DE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = IgnoreXcodeImageCompletions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smileykeith.IgnoreXcodeImageCompletions;
