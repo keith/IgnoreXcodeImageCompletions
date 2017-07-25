@@ -14,6 +14,7 @@ image autocompletion. Just in case you've ever been annoyed by this:
 
 OR:
 
+1. [Un-sign Xcode][unsign]
 1. Clone the repo
 1. Run `make install`
 
