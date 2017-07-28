@@ -1,7 +1,7 @@
 ARCHIVE_PATH = IgnoreXcodeImageCompletions.tar.gz
 INSTALL_PATH = $(HOME)/Library/Application Support/Developer/Shared/Xcode/Plug-ins/IgnoreXcodeImageCompletions.xcplugin
 
-install:
+install: uninstall
 	xcodebuild -configuration Release
 
 uninstall:
