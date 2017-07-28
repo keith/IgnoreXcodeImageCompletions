@@ -5,20 +5,23 @@
 
 + (void)load {
     NSLog(@"IgnoreXcodeImageCompletions: Loading!");
-    IMP replacement = imp_implementationWithBlock((NSString *)^{ return nil; });
-    Class class = objc_getClass("IDEMediaResourceCompletionItem");
-    Method originalMethod = class_getInstanceMethod(class, @selector(name));
-    const char* encoding = method_getTypeEncoding(originalMethod);
-    SEL newSelector = NSSelectorFromString(@"ixic_setName:");
-    BOOL added = class_addMethod(class, newSelector, replacement, encoding);
 
+    Class class = objc_getClass("IDEMediaLibraryCompletionStrategy");
+    IMP fakeInitializer = imp_implementationWithBlock((id)^{
+        NSLog(@"IgnoreXcodeImageCompletions: Fake initializer was called!");
+        return nil;
+    });
+
+    Method objectInit = class_getInstanceMethod(objc_getClass("NSObject"), @selector(init));
+    const char *encoding = method_getTypeEncoding(objectInit);
+
+    BOOL added = class_addMethod(class, @selector(init), fakeInitializer, encoding);
     if (!added) {
-        NSLog(@"IgnoreXcodeImageCompletions: Failed to add selector");
+        NSLog(@"IgnoreXcodeImageCompletions: Failed to add method :(");
         return;
     }
 
-    Method newMethod = class_getInstanceMethod(class, newSelector);
-    method_exchangeImplementations(originalMethod, newMethod);
+    NSLog(@"IgnoreXcodeImageCompletions: Swizzled selector!");
 }
 
 @end
