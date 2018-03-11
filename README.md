@@ -25,6 +25,8 @@ silly autocompletion behavior.
 
 Currently this plugin has been tested with (and has the UUIDs for):
 
+- Xcode 9.3 beta 4 (9Q127n)
+- Xcode 9.2 (9C40b)
 - Xcode 9.0 (9A235)
 - Xcode 8.3.3 (8E3004b)
 
